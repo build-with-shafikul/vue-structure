@@ -1,19 +1,64 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/islam.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hadith APP</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- <style type="text/tailwindcss">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/islam.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hadith APP</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- AOS Library -->
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+  <!-- <style type="text/tailwindcss">
       @theme {
         --color-clifford: #da373d;
       }
     </style> -->
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+</head>
+
+<body class="relative">
+
+  <!-- Corrected ID -->
+    <div id="particles-js" class="!max-w-[100%]"></div>
+
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ once: true, duration: 1000 });
+
+    document.addEventListener("DOMContentLoaded", function () {
+      particlesJS("particles-js", {
+        "particles": {
+          "number": { "value": 60, "density": { "enable": true, "value_area": 800 } },
+          "color": { "value": "#10B981" },
+          "shape": { "type": "circle" },
+          "opacity": { "value": 0.5, "random": true },
+          "size": { "value": 3, "random": true },
+          "line_linked": { "enable": true, "distance": 150, "color": "#10B981", "opacity": 0.4, "width": 1 },
+          "move": { "enable": true, "speed": 2, "direction": "none", "random": false, "straight": false }
+        },
+        "interactivity": {
+          "detect_on": "canvas",
+          "events": {
+            "onhover": { "enable": true, "mode": "grab" },
+            "onclick": { "enable": true, "mode": "push" }
+          },
+          "modes": {
+            "grab": { "distance": 140, "line_linked": { "opacity": 1 } },
+            "push": { "particles_nb": 4 }
+          }
+        },
+        "retina_detect": true
+      });
+    });
+  </script>
+</body>
+
 </html>
