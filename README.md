@@ -2,6 +2,7 @@
 ```sh
 git clone https://github.com/build-with-shafikul/vue-structure.git
 cd vue-structure
+rm -rf .git
 npm install
 npm run dev
 ```
